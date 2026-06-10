@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>CareerConnect</h1>
+
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="register.html">Register</a> |
+            <a href="companies.html">Companies</a> |
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+
+        <hr>
+    </header>
+
+    <main>
+
+        <h2>Student Registration Form</h2>
+
+        <form>
+
+            <label>Full Name:</label><br>
+            <input type="text" name="name"><br><br>
+
+            <label>Roll Number:</label><br>
+            <input type="text" name="roll"><br><br>
+
+            <label>Email:</label><br>
+            <input type="email" name="email"><br><br>
+
+            <label>Mobile Number:</label><br>
+            <input type="tel" name="mobile"><br><br>
+
+            <label>Branch:</label><br>
+            <select name="branch">
+                <option>Computer Science</option>
+                <option>Information Technology</option>
+                <option>Electronics</option>
+                <option>Mechanical</option>
+            </select><br><br>
+
+            <label>CGPA:</label><br>
+            <input type="number" step="0.01" name="cgpa"><br><br>
+
+            <label>Skills:</label><br>
+
+            <input type="checkbox"> Java
+            <input type="checkbox"> Python
+            <input type="checkbox"> C++
+            <input type="checkbox"> HTML
+            <input type="checkbox"> CSS
+            <input type="checkbox"> JavaScript
+
+            <br><br>
+
+            <label>Gender:</label><br>
+
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+
+            <br><br>
+
+            <label>Address:</label><br>
+            <textarea rows="5" cols="40"></textarea>
+
+            <br><br>
+
+            <input type="submit" value="Register">
+            <input type="reset" value="Clear">
+
+        </form>
+
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 CareerConnect Campus Placement Portal</p>
+    </footer>
+
+</body>
+
+</html>
