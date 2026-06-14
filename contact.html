@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Contact Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerConnect - Contact</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,57 +15,42 @@
         <h1>CareerConnect</h1>
 
         <nav>
-            <a href="index.html">Home</a> |
-            <a href="register.html">Register</a> |
-            <a href="companies.html">Companies</a> |
-            <a href="dashboard.html">Dashboard</a> |
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="companies.html">Companies</a>
+            <a href="dashboard.html">Dashboard</a>
             <a href="contact.html">Contact</a>
         </nav>
-
-        <hr>
     </header>
 
     <main>
 
         <h2>Contact Placement Cell</h2>
 
-        <form>
+        <!-- CONTACT FORM -->
+        <form id="contactForm" onsubmit="return sendMessage()">
 
-            <label>Full Name:</label><br>
-            <input type="text" name="name"><br><br>
+            <label>Name:</label>
+            <input type="text" id="c_name" placeholder="Enter your name">
 
-            <label>Email:</label><br>
-            <input type="email" name="email"><br><br>
+            <label>Email:</label>
+            <input type="email" id="c_email" placeholder="Enter your email">
 
-            <label>Subject:</label><br>
-            <input type="text" name="subject"><br><br>
+            <label>Subject:</label>
+            <input type="text" id="c_subject" placeholder="Subject">
 
-            <label>Message:</label><br>
-            <textarea rows="6" cols="50"></textarea><br><br>
+            <label>Message:</label>
+            <textarea id="c_msg" rows="5" placeholder="Write your message"></textarea>
 
-            <input type="submit" value="Send Message">
-            <input type="reset" value="Clear">
+            <button type="submit">Send Message</button>
 
         </form>
 
-        <br>
-
-        <h3>Placement Cell Information</h3>
-
-        <p><b>Email:</b> placement@college.com</p>
-        <p><b>Phone:</b> +91 48548885485</p>
-        <p><b>Office Hours:</b> 9:00 AM - 5:00 PM</p>
-        <p><b>Address:</b> Training & Placement Cell, College Campus</p>
-
     </main>
 
-    <hr>
-
-    <footer>
-        <p>&copy; 2026 CareerConnect Campus Placement Portal</p>
-    </footer>
-
+    <!-- JS FILE -->
     <script src="pro.js"></script>
+
 </body>
 
 </html>

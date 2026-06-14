@@ -1,28 +1,9 @@
-// Navigation Functions
-
-function openHome() {
-    window.location.href = "index.html";
-}
-
+// navigation
 function openRegister() {
     window.location.href = "register.html";
 }
 
-function openCompanies() {
-    window.location.href = "companies.html";
-}
-
-function openDashboard() {
-    window.location.href = "dashboard.html";
-}
-
-function openContact() {
-    window.location.href = "contact.html";
-}
-
-
-// Registration Form Validation
-
+// register validation only
 function validateForm() {
 
     let name = document.getElementById("name").value;
@@ -30,8 +11,8 @@ function validateForm() {
     let email = document.getElementById("email").value;
     let cgpa = document.getElementById("cgpa").value;
 
-    if (name === "" || roll === "" || email === "" || cgpa === "") {
-        alert("Please fill all fields");
+    if (!name || !roll || !email || !cgpa) {
+        alert("Please fill all fields!");
         return false;
     }
 
@@ -39,75 +20,25 @@ function validateForm() {
     return true;
 }
 
-
-// Company Search
-
+// search
 function searchCompany() {
 
-    let search =
-        document.getElementById("search").value.toLowerCase();
+    let s = document.getElementById("search").value.toLowerCase();
 
-    let companies = [
-        "tcs",
-        "infosys",
-        "wipro",
-        "accenture",
-        "capgemini",
-        "cognizant"
-    ];
-
-    let found = false;
-
-    for (let i = 0; i < companies.length; i++) {
-
-        if (search === companies[i]) {
-            found = true;
-            break;
-        }
-    }
-
-    if (found) {
-        document.getElementById("result").innerHTML =
-            "Company Found";
+    if (s === "tcs" || s === "infosys" || s === "wipro") {
+        document.getElementById("result").innerText = "Company Found ✔";
     } else {
-        document.getElementById("result").innerHTML =
-            "Company Not Found";
+        document.getElementById("result").innerText = "Not Found ❌";
     }
 }
 
+// apply
+// function applyCompany(company) {
+//     alert("Applied for " + company);
+// }
 
-// Eligibility Checker
-
-function checkEligibility() {
-
-    let cgpa =
-        parseFloat(document.getElementById("cgpaCheck").value);
-
-    let result = "";
-
-    if (cgpa >= 6)
-        result += "TCS<br>";
-
-    if (cgpa >= 6.5)
-        result += "Infosys<br>";
-
-    if (cgpa >= 7)
-        result += "Wipro<br>";
-
-    if (cgpa >= 7.5)
-        result += "Accenture<br>";
-
-    if (result === "")
-        result = "Not eligible for any company";
-
-    document.getElementById("eligibilityResult").innerHTML =
-        result;
-}
-
-
-// Apply Company
-
-function applyCompany(companyName) {
-
-    alert("Successfully Applied for " + companyName);
+// contact
+function sendMessage() {
+    alert("Message Sent Successfully!");
+    return false;
 }
