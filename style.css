@@ -181,7 +181,8 @@ footer {
 
 /* Responsive Design */
 
-@media(max-width:768px) {
+
+/* @media(max-width:768px) {
     nav a {
         display: block;
         margin: 10px 0;
@@ -197,4 +198,4 @@ footer {
     textarea {
         width: 100%;
     }
-}
+} */
